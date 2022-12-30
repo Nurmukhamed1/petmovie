@@ -1,0 +1,1 @@
+from cadres.models.movieshots import MovieShots
