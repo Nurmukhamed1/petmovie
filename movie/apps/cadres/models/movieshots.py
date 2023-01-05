@@ -2,6 +2,7 @@ from django.db import models
 
 from movies.models import Movies
 
+
 class MovieShots(models.Model):
     title = models.CharField(max_length=128)
     description = models.TextField()
