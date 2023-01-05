@@ -8,6 +8,5 @@ class MovieDetailViewSet(
     mixins.RetrieveModelMixin,
     viewsets.GenericViewSet
 ):
-    lookup_field = "pk"
     queryset = Movies.objects.all()
     serializer_class = MovieDetailSerializer
