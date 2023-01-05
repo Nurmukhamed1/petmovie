@@ -5,6 +5,7 @@ from django.urls import path, include
 
 api_v1_patterns = [
     path("movies/", include("movies.api.v1.urls")),
+    path("reviews/", include("reviews.api.v1.urls")),
 ]
 
 api_patterns = [

@@ -40,7 +40,7 @@ class MovieDetailSerializer(serializers.ModelSerializer):
     def get_genres(data):
         return data.genres.values("name")
 
-    def get_movieshots(self, data):
+    def get_movieshots(self, data):  # TODO: make it normal
         request = self.context.get("request")
         q = MovieShots.objects.filter(movie=data.pk)
         response = []
