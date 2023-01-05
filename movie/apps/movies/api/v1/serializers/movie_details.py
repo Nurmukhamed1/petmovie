@@ -23,8 +23,6 @@ class MovieDetailSerializer(serializers.ModelSerializer):
             "budget",
             "fees_in_usa",
             "fees_in_world",
-            "category",
-            "url",
         ]
 
     @staticmethod

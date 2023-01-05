@@ -10,4 +10,5 @@ class MovieSerializer(serializers.ModelSerializer):
             "title",
             "tagline",
             "poster",
+            "url",
         ]
