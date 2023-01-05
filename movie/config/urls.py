@@ -3,6 +3,8 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path, include
 
+from .swagger.url import swagger_patterns
+
 api_v1_patterns = [
     path("movies/", include("movies.api.v1.urls")),
     path("reviews/", include("reviews.api.v1.urls")),
@@ -15,6 +17,7 @@ api_patterns = [
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("api/", include(api_patterns)),
+    path("swagger/", include(swagger_patterns)),
 ]
 
 if settings.DEBUG:
