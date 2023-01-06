@@ -11,4 +11,5 @@ class ReviewSerializer(serializers.ModelSerializer):
             "name",
             "text",
             "movie",
+            "parent",
         ]
