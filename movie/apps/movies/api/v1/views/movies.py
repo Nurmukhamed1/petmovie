@@ -24,5 +24,5 @@ class MoviesViewSet(
     def get_queryset(self):
         queryset = super(MoviesViewSet, self).get_queryset()
         if self.action == "list":
-            queryset.filter(draft=False)
+            queryset = queryset.filter(draft=False)
         return queryset

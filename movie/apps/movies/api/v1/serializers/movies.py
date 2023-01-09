@@ -47,10 +47,10 @@ class MovieDetailSerializer(serializers.ModelSerializer):
             "fees_in_world",
         )
 
-    def get_movieshots(self, data):  # TODO: make it normal
-        request = self.context.get("request")
-        q = MovieShots.objects.filter(movie=data.pk)
-        response = []
-        for i in range(len(q)):
-            response.append(request.build_absolute_uri(q[i].image.url))
-        return response
+    # def get_movieshots(self, data):  # TODO: make it normal
+    #     request = self.context.get("request")
+    #     q = MovieShots.objects.filter(movie=data.pk)
+    #     response = []
+    #     for i in range(len(q)):
+    #         response.append(request.build_absolute_uri(q[i].image.url))
+    #     return response

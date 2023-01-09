@@ -25,6 +25,7 @@ class ReviewViewSet(
     }
 
     def get_queryset(self):
+        queryset = super(ReviewViewSet, self).get_queryset()
         if self.action == "list":
-            return Reviews.objects.filter(parent=None)
-        return self.queryset
+            queryset = queryset.filter(parent=None)
+        return queryset
