@@ -15,6 +15,13 @@ class ReviewSerializer(serializers.ModelSerializer):
             "text",
         )
 
+    def create(self, validated_data):
+        parent = self.validated_data["parent"]
+        if parent:
+            parent_name = Reviews.objects.get(pk=parent.id).name
+            validated_data["text"] = parent_name + ", " + validated_data["text"]
+        return super().create(validated_data)
+
 
 class ReviewReplySerializer(serializers.ModelSerializer):
     children = ReviewSerializer(source="reply", many=True)

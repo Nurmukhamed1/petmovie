@@ -1,4 +1,4 @@
-from drf_spectacular.utils import extend_schema, extend_schema_view
+from drf_spectacular.utils import extend_schema
 from rest_framework import mixins, viewsets
 
 from reviews.api.v1.serializers.reviews import ReviewReplySerializer
@@ -28,8 +28,3 @@ class ReviewViewSet(
         if self.action == "list":
             return Reviews.objects.filter(parent=None)
         return self.queryset
-
-    def perform_create(self, serializer):
-        parent_id = self.request.data["parent"]
-        parent_name = self.queryset.get(pk=parent_id).name
-        serializer.save(text=parent_name + ", " + self.request.data["text"])
