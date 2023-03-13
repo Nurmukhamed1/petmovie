@@ -1,7 +1,8 @@
 from django.contrib import admin
-
-# Register your models here.
-
 from .models import Reviews
 
-admin.site.register(Reviews)
+
+@admin.register(Reviews)
+class ReviewAdmin(admin.ModelAdmin):
+    list_display = ("name", "email", "parent", "movie", "id")
+    readonly_fields = ("name", "email")

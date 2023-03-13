@@ -1,7 +1,7 @@
 from django.contrib import admin
-
-# Register your models here.
-
 from .models import MovieShots
 
-admin.site.register(MovieShots)
+
+@admin.register(MovieShots)
+class MovieShotsAdmin(admin.ModelAdmin):
+    list_display = ("title", "movie")
