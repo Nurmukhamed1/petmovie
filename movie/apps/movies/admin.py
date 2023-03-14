@@ -1,5 +1,7 @@
 from django.contrib import admin
+from django.utils.safestring import mark_safe
 
+from cadres.models import MovieShots
 from reviews.models import Reviews
 from .models import Movies
 
@@ -11,13 +13,25 @@ class ReviewInline(admin.TabularInline):
     readonly_fields = ("name", "email")
 
 
+class CadresInline(admin.TabularInline):
+    model = MovieShots
+    extra = 1
+    readonly_fields = ("get_image",)
+
+    def get_image(self, obj):
+        return mark_safe(f'<img src={obj.image.url} width="50" height="50"')
+
+    get_image.short_description = "Image"
+
+
 @admin.register(Movies)
 class MovieAdmin(admin.ModelAdmin):
     """Фильмы"""
     list_display = ("title", "category", "url", "draft")
     list_filter = ("category", "year")
     search_fields = ("title", "category__name")
-    inlines = [ReviewInline]
+    inlines = [CadresInline, ReviewInline]
+    readonly_fields = ("get_image",)
     save_on_top = True
     save_as = True
     list_editable = ("draft",)
@@ -26,7 +40,7 @@ class MovieAdmin(admin.ModelAdmin):
             "fields": (("title", "tagline"),)
         }),
         (None, {
-            "fields": ("description", "poster")
+            "fields": ("description", ("poster", "get_image",))
         }),
         (None, {
             "fields": (("year", "world_premiere", "country"),)
@@ -42,3 +56,8 @@ class MovieAdmin(admin.ModelAdmin):
             "fields": (("url", "draft"),)
         }),
     )
+
+    def get_image(self, obj):
+        return mark_safe(f'<img src={obj.poster.url} width="110" height="100"')
+
+    get_image.short_description = "Poster"
