@@ -35,6 +35,7 @@ class MovieAdmin(admin.ModelAdmin):
     save_on_top = True
     save_as = True
     list_editable = ("draft",)
+    actions = ["publish", "unpublish"]
     fieldsets = (
         (None, {
             "fields": (("title", "tagline"),)
@@ -61,3 +62,25 @@ class MovieAdmin(admin.ModelAdmin):
         return mark_safe(f'<img src={obj.poster.url} width="110" height="100"')
 
     get_image.short_description = "Poster"
+
+    def unpublish(self, request, queryset):
+        row_update = queryset.update(draft=True)
+        if row_update == 1:
+            message_bit = "One value was changed"
+        else:
+            message_bit = f"{row_update} values was changed"
+        self.message_user(request, message_bit)
+
+    def publish(self, request, queryset):
+        row_update = queryset.update(draft=False)
+        if row_update == 1:
+            message_bit = "1 value was changed"
+        else:
+            message_bit = f"{row_update} values was changed"
+        self.message_user(request, message_bit)
+
+    publish.short_description = "Publish"
+    publish.allowed_permissions = ("change",)
+
+    unpublish.short_description = "Unpublish"
+    unpublish.allowed_permissions = ("change",)
