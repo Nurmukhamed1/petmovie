@@ -17,67 +17,67 @@ Implementing security features to protect user data.<br/>
 
 ## Functional Requirements:
 
-**User Registration and Login:**
+**User Registration and Login:**<br/>
 Provide a user registration and login system to allow users to create an account and log in to the website.<br/>
 
-**Homepage:**
+**Homepage:**<br/>
 Design a homepage that displays a list of recommended movies and TV shows, as well as popular and trending content.<br/>
 
-**Search Function:**
+**Search Function:**<br/>
 Implement a search function that allows users to search for movies and TV shows based on various criteria, such as
 title, genre, actor, director, or year.<br/>
 
-**Movie and TV Show Details:**
+**Movie and TV Show Details:**<br/>
 Provide users with detailed information on movies and TV shows, including synopsis, cast and crew, ratings, reviews, and
 trailer videos.<br/>
 
-**atchlist:**
+**atchlist:**<br/>
 Allow users to create and manage a watchlist of movies and TV shows they want to watch in the future.<br/>
 
-**Reviews and Ratings:**
+**Reviews and Ratings:**<br/>
 Enable users to leave reviews and ratings on movies and TV shows they have watched. Display these reviews and ratings on
 the movie or TV show details page.<br/>
 
-**Recommendations:**
+**Recommendations:**<br/>
 Implement a recommendation system that suggests movies and TV shows based on the user's viewing history, search queries,
 and watchlist. The recommendation system should use machine learning algorithms and data analysis techniques to make
 accurate and relevant recommendations.<br/>
 
-**Content Filtering:**
+**Content Filtering:**<br/>
 Add content filtering options to the search function, such as genre, year, rating, and language. Users should be able to
 apply multiple filters at once to refine their search results.<br/>
 
-**Social Media Integration:**
+**Social Media Integration:**<br/>
 Integrate the website with popular social media platforms, such as Facebook and Twitter, to allow users to share movie
 and TV show recommendations with their friends and followers.<br/>
 
-**User Activity Tracking:**
+**User Activity Tracking:**<br/>
 Track user activity on the website, such as search queries, page views, and watchlist additions. This data should be
 used to improve the recommendation system and personalize the user's viewing experience.<br/>
 
-**Multiple Languages Support:**
+**Multiple Languages Support:**<br/>
 Provide support for multiple languages, allowing users to switch between languages and view movie and TV show
 information in their preferred language.<br/>
 
-**User Privacy:**
+**User Privacy:**<br/>
 Ensure that user data, such as login credentials and personal information, is stored securely and protected from
 unauthorized access. Implement data encryption and user authentication and authorization features to ensure user
 privacy.<br/>
 
-**Payment Integration:**
+**Payment Integration:**<br/>
 Implement payment integration for premium content, such as movies and TV shows that require a subscription or rental
 fee. Users should be able to make payments securely and easily through the website.<br/>
 
-**Premium Users Logic:**
+**Premium Users Logic:**<br/>
 Implement a premium users system that offers additional features to users who pay for a subscription. Premium users
 should be able to access exclusive content, watch movies and TV shows without ads, and get early access to new
 releases.<br/>
 
-**Admin Panel:**
+**Admin Panel:**<br/>
 Develop an admin panel that allows administrators to manage and monitor content on the website. This includes adding,
 updating, and deleting movies and TV shows, as well as managing user accounts and viewing website analytics.<br/>
 
-**Mobile Optimization:**
+**Mobile Optimization:**<br/>
 Ensure that the website is optimized for mobile devices, providing a responsive and user-friendly interface for users
 accessing the website from their smartphones or tablets.<br/>
 
