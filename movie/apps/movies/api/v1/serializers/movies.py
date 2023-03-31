@@ -3,7 +3,7 @@ from rest_framework import serializers
 from actors.api.v1.serializers.actors import ActorSerializer
 from cadres.api.v1.serializers.movieshots import MovieShotSerializer
 from cadres.models import MovieShots
-from genre.api.v1.serializers.genres import GenreSerializer
+from genre.api.v1.serializers.genre import GenreSerializer
 from movies.models import Movies
 
 

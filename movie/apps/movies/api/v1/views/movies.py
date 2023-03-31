@@ -1,6 +1,8 @@
+from django_filters.rest_framework import DjangoFilterBackend
 from drf_spectacular.utils import extend_schema
 from rest_framework import mixins, viewsets
 
+from movies.api.v1.filters.movies import MovieFilterSet
 from movies.api.v1.serializers.movies import MovieDetailSerializer
 from movies.models import Movies
 from movies.api.v1.serializers import MovieSerializer
@@ -14,6 +16,8 @@ class MoviesViewSet(
     mixins.RetrieveModelMixin,
     viewsets.GenericViewSet
 ):
+    filter_backends = (DjangoFilterBackend,)
+    filterset_class = MovieFilterSet
     serializer_class = MovieSerializer
     queryset = Movies.objects.all()
     serializer_classes = {

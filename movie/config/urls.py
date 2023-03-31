@@ -8,6 +8,8 @@ from .swagger.url import swagger_patterns
 api_v1_patterns = [
     path("movies/", include("movies.api.v1.urls")),
     path("reviews/", include("reviews.api.v1.urls")),
+    path("actors/", include("actors.api.v1.urls")),
+    path("filters/", include("filters.api.v1.urls")),
 ]
 
 api_patterns = [

@@ -1,7 +1,8 @@
 DEBUG = True
 
 INSTALLED_APPS = [
-    'django.contrib.admin',
+    "material",
+    "material.admin",
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
