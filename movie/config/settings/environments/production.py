@@ -17,4 +17,5 @@ INSTALLED_APPS = [
     'movies',
     'ratings',
     'reviews',
+    "users",
 ]

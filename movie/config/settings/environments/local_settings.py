@@ -19,6 +19,7 @@ INSTALLED_APPS = [
     'movies',
     'ratings',
     'reviews',
+    "users",
 ]
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.

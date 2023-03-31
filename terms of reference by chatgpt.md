@@ -31,7 +31,7 @@ title, genre, actor, director, or year.<br/>
 Provide users with detailed information on movies and TV shows, including synopsis, cast and crew, ratings, reviews, and
 trailer videos.<br/>
 
-**atchlist:**<br/>
+**Watchlist:**<br/>
 Allow users to create and manage a watchlist of movies and TV shows they want to watch in the future.<br/>
 
 **Reviews and Ratings:**<br/>
